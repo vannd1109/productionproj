@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access.basic.data.color,access_basic_data_color,om_production.model_basic_data_color,base.group_user,1,1,1,1
+access.kind.item,access_kind_item,om_production.model_kind_item,base.group_user,1,1,1,1
+access.order.type,access_order_type,om_production.model_order_type,base.group_user,1,1,1,1
+access.origin,access_origin,om_production.model_origin,base.group_user,1,1,1,1
+access.master.item,access_master_item,om_production.model_master_item,base.group_user,1,1,1,1
