@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_production_kind_item_tree" model="ir.ui.view">
+        <field name="name">basic.data.kind.item.tree</field>
+        <field name="model">basic.data.kind.item</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="fieldValue"/>
+                <field name="fieldValueVN"/>
+                <field name="remarks"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_production_kind_item_form" model="ir.ui.view">
+        <field name="name">basic.data.kind.item.form</field>
+        <field name="model">basic.data.kind.item</field>
+        <field name="arch" type="xml">
+            <form string="_form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="fieldValue"/>
+                    </group>
+                    <group>
+                        <field name="fieldValueVN"/>
+                        <field name="remarks"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_production_kind_item_search" model="ir.ui.view">
+        <field name="name">basic.data.kind.item.search</field>
+        <field name="model">basic.data.kind.item</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_basic_data_kind_item" model="ir.actions.act_window">
+            <field name="name">Kind Item</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">basic.data.kind.item</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your first Kind Item!
+                </p>
+            </field>
+    </record>
+    <menuitem id="menu_kind_item"
+          name="KindItem"
+          parent="menu_basic_data"
+          action="action_basic_data_kind_item"
+          sequence="1" />
+</odoo>

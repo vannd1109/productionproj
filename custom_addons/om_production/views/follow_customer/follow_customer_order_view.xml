@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_production_follow_customer_order_tree" model="ir.ui.view">
+        <field name="name">follow.customer.order.tree</field>
+        <field name="model">follow.customer.order</field>
+        <!--        <field name="arch" type="xml">-->
+        <!--            <xpath expr="//tree" position="inside">-->
+        <!--                <header>-->
+        <!--                    <button name="action_test" string="Start Configuration" type="object" class="btn-primary"/>-->
+        <!--                </header>-->
+        <!--            </xpath>-->
+        <!--            <tree create="0">-->
+        <!--                <field name="drawingNo"/>-->
+        <!--                <field name="qty"/>-->
+        <!--                <field name="remarks"/>-->
+        <!--                <field name="remarks1"/>-->
+        <!--                <field name="weight1Pcs"/>-->
+        <!--                <field name="totalWeight"/>-->
+        <!--            </tree>-->
+        <!--        </field>-->
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="js_class">button_in_kanban</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_production_follow_customer_order_form" model="ir.ui.view">
+        <field name="name">follow.customer.order.form</field>
+        <field name="model">follow.customer.order</field>
+        <field name="arch" type="xml">
+            <form string="_form">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="drawingNo"/>
+                            <field name="qty"/>
+                            <field name="remarks"/>
+                        </group>
+                        <group>
+                            <field name="remarks1"/>
+                            <field name="weight1Pcs"/>
+                            <field name="totalWeight"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--    <record id="view_production_unit_search" model="ir.ui.view">-->
+    <!--        <field name="name">basic.data.unit.search</field>-->
+    <!--        <field name="model">basic.data.unit</field>-->
+    <!--        <field name="arch" type="xml">-->
+    <!--            <search>-->
+    <!--                <field name="fieldCode"/>-->
+    <!--            </search>-->
+    <!--        </field>-->
+    <!--    </record>-->
+
+    <record id="action_basic_data_follow_customer_order" model="ir.actions.act_window">
+        <field name="name">Follow Customer Order</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">follow.customer.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem id="menu_follow_customer_order"
+              name="Follow Customer Order"
+              parent="menu_follow_customer"
+              action="action_basic_data_follow_customer_order"
+              sequence="0"/>
+</odoo>

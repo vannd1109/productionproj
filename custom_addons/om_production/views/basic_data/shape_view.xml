@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_production_shape_tree" model="ir.ui.view">
+        <field name="name">basic.data.shape.tree</field>
+        <field name="model">basic.data.shape</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="fieldCode"/>
+                <field name="name"/>
+                <field name="fieldValueVN"/>
+                <field name="remarks"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_production_shape_form" model="ir.ui.view">
+        <field name="name">basic.data.shape.form</field>
+        <field name="model">basic.data.shape</field>
+        <field name="arch" type="xml">
+            <form string="_form">
+                <sheet>
+                    <group>
+                        <field name="fieldCode"/>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="fieldValueVN"/>
+                        <field name="remarks"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_production_shape_search" model="ir.ui.view">
+        <field name="name">basic.data.shape.search</field>
+        <field name="model">basic.data.shape</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="fieldCode"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_basic_data_shape" model="ir.actions.act_window">
+        <field name="name">Shape</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">basic.data.shape</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Shape!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_shape"
+              name="Shape"
+              parent="menu_basic_data"
+              action="action_basic_data_shape"
+              sequence="5"/>
+</odoo>

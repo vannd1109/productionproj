@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_production_tech_group_tree" model="ir.ui.view">
+        <field name="name">basic.data.tech.group.tree</field>
+        <field name="model">basic.data.tech.group</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="fieldCode"/>
+                <field name="fieldValue"/>
+                <field name="fieldValueVN"/>
+                <field name="remarks"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_production_tech_group_form" model="ir.ui.view">
+        <field name="name">basic.data.tech.group.form</field>
+        <field name="model">basic.data.tech.group</field>
+        <field name="arch" type="xml">
+            <form string="_form">
+                <sheet>
+                    <group>
+                        <field name="fieldCode"/>
+                        <field name="fieldValue"/>
+                    </group>
+                    <group>
+                        <field name="fieldValueVN"/>
+                        <field name="remarks"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_production_tech_group_search" model="ir.ui.view">
+        <field name="name">basic.data.tech.group.search</field>
+        <field name="model">basic.data.tech.group</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="fieldCode"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_basic_data_tech_group" model="ir.actions.act_window">
+        <field name="name">TechGroup</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">basic.data.tech.group</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first TechGroup!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_tech_group"
+              name="TechGroup"
+              parent="menu_basic_data"
+              action="action_basic_data_tech_group"
+              sequence="8"/>
+</odoo>

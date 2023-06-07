@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
     <menuitem id="menu_erp_root"
               name="Production Proj"
               web_icon="om_production,static/description/production.png"
-              sequence="0" />
+              sequence="0"/>
     <menuitem id="menu_basic_data"
               name="Basic Data"
               parent="menu_erp_root"
-              sequence="0" />
+              sequence="0"/>
     <menuitem id="menu_master_data"
               name="Master Data"
               parent="menu_erp_root"
-              sequence="1" />
-
+              sequence="1"/>
+    <menuitem id="menu_follow_customer"
+              name="Follow Customer"
+              parent="menu_erp_root"
+              sequence="2"/>
 </odoo>

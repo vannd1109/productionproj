@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_production_master_data_form" model="ir.ui.view">
+        <field name="name">master.item.form</field>
+        <field name="model">master.item</field>
+        <field name="arch" type="xml">
+            <form string="_form">
+                <sheet>
+                    <group>
+                        <group>
+                            <group>
+                                <label for="facility" string="Facility"/>
+                                <div class="address_format">
+                                    <field name="facility"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="itemNo" string="Item No"/>
+                                <div class="address_format">
+                                    <field name="itemNo"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="drawingNo" string="Drawing No"/>
+                                <div class="address_format">
+                                    <field name="drawingNo"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="itemName" string="Item Name"/>
+                                <div class="address_format">
+                                    <field name="itemName"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="itemDesc" string="Item Desc"/>
+                                <div class="address_format">
+                                    <field name="itemDesc"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="itemTypeName" string="Item Type"/>
+                                <div class="address_format">
+                                    <field name="itemTypeCode" force_save="1" readonly="1" class="oe_highlight" style="width: 10%"/>
+                                    <field name="itemTypeName" force_save="1" style="width: 90%"/>
+                                </div>
+                            </group>
+                            <group>
+                                <field name="itemSize" string="Item Size"/>
+                                <field name="gamMe"/>
+                            </group>
+                            <group>
+                                <label for="status" string="Status"/>
+                                <div class="address_format">
+                                    <field name="statusValue" force_save="1" readonly="1" class="oe_highlight" style="width: 10%"/>
+                                    <field name="status" force_save="1" style="width: 90%"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="unit" string="Unit"/>
+                                <div class="address_format">
+                                    <field name="unitValue" force_save="1" readonly="1" class="oe_highlight" style="width: 10%"/>
+                                    <field name="unit" force_save="1" style="width: 90%"/>
+                                </div>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <label for="netWeight" string="Net Weight"/>
+                                <div class="address_format">
+                                    <field name="netWeight"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="collection" string="Collection"/>
+                                <div class="address_format">
+                                    <field name="collection"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="techGroup" string="TechGroup"/>
+                                <div class="address_format">
+                                    <field name="techGroup"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="quality" string="Quality"/>
+                                <div class="address_format">
+                                    <field name="qualityCode" force_save="1" readonly="1" class="oe_highlight" style="width: 10%"/>
+                                    <field name="quality" force_save="1" style="width: 90%"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="shape" string="Item Shape"/>
+                                <div class="address_format">
+                                    <field name="shapeCode" force_save="1" readonly="1" class="oe_highlight" style="width: 10%"/>
+                                    <field name="shape" force_save="1" style="width: 90%"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="lop" string="Lop"/>
+                                <div class="address_format">
+                                    <field name="lop"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="pathPicture" string="Picture Path"/>
+                                <div class="address_format">
+                                    <field name="pathPicture"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="note" string="Note"/>
+                                <div class="address_format">
+                                    <field name="note"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="lacquerWeight" string="Lacquer Weight"/>
+                                <div class="address_format">
+                                    <field name="lacquerWeight"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="designer" string="Designer"/>
+                                <div class="address_format">
+                                    <field name="designer"/>
+                                </div>
+                            </group>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_production_master_item_tree" model="ir.ui.view">
+        <field name="name">master.item.tree</field>
+        <field name="model">master.item</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="itemNo"/>
+                <field name="drawingNo"/>
+                <field name="itemName"/>
+                <field name="itemDesc"/>
+                <field name="itemTypeCode"/>
+                <field name="itemTypeName"/>
+                <field name="kindItem"/>
+                <field name="statusValue"/>
+                <field name="unitValue"/>
+                <field name="netWeight"/>
+                <field name="collection"/>
+                <field name="create_date"/>
+                <field name="lastModifyDate"/>
+                <field name="createdUser"/>
+                <field name="lastModifyUser"/>
+                <field name="itemSize"/>
+                <field name="gamMe"/>
+                <field name="pathPicture"/>
+                <field name="note"/>
+                <field name="qualityCode"/>
+                <field name="shapeCode"/>
+                <field name="techGroup"/>
+                <field name="lop"/>
+                <field name="lacquerWeight"/>
+                <field name="designer"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_master_data_master_item" model="ir.actions.act_window">
+        <field name="name">Master Item</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">master.item</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Master Item!
+            </p>
+        </field>
+    </record>
+    <menuitem id="menu_master_item"
+              name="Master Item"
+              parent="menu_master_data"
+              action="action_master_data_master_item"
+              sequence="0"/>
+</odoo>
