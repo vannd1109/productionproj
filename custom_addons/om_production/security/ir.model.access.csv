@@ -11,5 +11,16 @@ access.basic.data.tech.group,access_basic_data_tech_group,om_production.model_ba
 access.basic.data.unit,access_basic_data_unit,om_production.model_basic_data_unit,base.group_user,1,1,1,1
 access.basic.data.item.type,access_basic_data_item_type,om_production.model_basic_data_item_type,base.group_user,1,1,1,1
 access.basic.data.customer,access_basic_data_customer,om_production.model_basic_data_customer,base.group_user,1,1,1,1
+access.basic.data.production.step,access_basic_data_production_step,om_production.model_basic_data_production_step,base.group_user,1,1,1,1
+access.basic.data.worker.center,access_basic_data_worker_center,om_production.model_basic_data_worker_center,base.group_user,1,1,1,1
+access.basic.data.warehouse,access_basic_data_warehouse,om_production.model_basic_data_warehouse,base.group_user,1,1,1,1
+access.basic.data.location,access_basic_data_location,om_production.model_basic_data_location,base.group_user,1,1,1,1
+access.basic.data.lop,access_basic_data_lop,om_production.model_basic_data_lop,base.group_user,1,1,1,1
+access.basic.data.worker.team,access_basic_data_worker_team,om_production.model_basic_data_worker_team,base.group_user,1,1,1,1
+access.basic.data.sites,access_basic_data_sites,om_production.model_basic_data_sites,base.group_user,1,1,1,1
+access.basic.data.production.process,access_basic_data_production_process,om_production.model_basic_data_production_process,base.group_user,1,1,1,1
 access.master.item,access_master_item,om_production.model_master_item,base.group_user,1,1,1,1
 access.follow.customer.order,access_follow_customer_order,om_production.model_follow_customer_order,base.group_user,1,1,1,1
+access.report.view.bag,access_report_view_bag,om_production.model_report_view_bag,base.group_user,1,1,1,1
+access.report.view.bag.detail,access_report_view_bag_detail,om_production.model_report_view_bag_detail,base.group_user,1,1,1,1
+access.report.view.bag.summary.by.customer,access_report_view_bag_summary_by_customer,om_production.model_report_view_bag_summary_by_customer,base.group_user,1,1,1,1

@@ -4,9 +4,9 @@
         <field name="name">basic.data.order.type.tree</field>
         <field name="model">basic.data.order.type</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree export_xlsx="0">
                 <field name="fieldCode"/>
-                <field name="fieldValue"/>
+                <field name="name"/>
                 <field name="fieldValueVN"/>
                 <field name="remarks"/>
             </tree>
@@ -21,7 +21,7 @@
                 <sheet>
                     <group>
                         <field name="fieldCode"/>
-                        <field name="fieldValue"/>
+                        <field name="name"/>
                     </group>
                     <group>
                         <field name="fieldValueVN"/>

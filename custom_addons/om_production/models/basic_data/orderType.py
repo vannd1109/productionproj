@@ -6,13 +6,13 @@ class OrderType(models.Model):
 
     fieldCode = fields.Char(
         string='FieldCode')
-    fieldValue = fields.Text(
+    name = fields.Char(
         string="FieldValue",
         required=False)
-    fieldValueVN = fields.Text(
+    fieldValueVN = fields.Char(
         string="FieldValueVN",
         required=False)
-    remarks = fields.Text(
+    remarks = fields.Char(
         string="Remarks",
         required=False)
 

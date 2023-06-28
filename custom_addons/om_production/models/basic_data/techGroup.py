@@ -6,10 +6,10 @@ class TechGroup(models.Model):
 
     fieldCode = fields.Char(
         string='FieldCode')
-    fieldValue = fields.Text(
+    fieldValue = fields.Char(
         string="FieldValue",
         required=False)
-    fieldValueVN = fields.Text(
+    fieldValueVN = fields.Char(
         string="FieldValueVN",
         required=False)
     remarks = fields.Text(

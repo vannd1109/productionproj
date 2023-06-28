@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_production_location_tree" model="ir.ui.view">
+        <field name="name">basic.data.location.tree</field>
+        <field name="model">basic.data.location</field>
+        <field name="arch" type="xml">
+            <tree export_xlsx="0">
+                <field name="warehouse"/>
+                <field name="location"/>
+                <field name="description"/>
+                <field name="group"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_production_location_form" model="ir.ui.view">
+        <field name="name">basic.data.location.form</field>
+        <field name="model">basic.data.location</field>
+        <field name="arch" type="xml">
+            <form string="_form">
+                <sheet>
+                    <group>
+                        <field name="warehouse"/>
+                        <field name="location"/>
+                    </group>
+                    <group>
+                        <field name="description"/>
+                        <field name="group"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_production_location_search" model="ir.ui.view">
+        <field name="name">basic.data.location.search</field>
+        <field name="model">basic.data.location</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="warehouse"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_basic_data_location" model="ir.actions.act_window">
+        <field name="name">Location</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">basic.data.location</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Location!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_location"
+              name="Location"
+              parent="menu_basic_data"
+              action="action_basic_data_location"
+              sequence="15"/>
+</odoo>

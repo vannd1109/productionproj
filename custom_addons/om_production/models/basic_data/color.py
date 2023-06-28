@@ -4,18 +4,19 @@ class Color(models.Model):
     _name = 'basic.data.color'
     _description = 'Color'
 
-    fieldCode = fields.Char(
-        string='FieldCode', translate=True)
-    fieldValue = fields.Text(
+    name = fields.Char(
+        string='FieldCode')
+
+    fieldValue = fields.Char(
         string="FieldValue",
         required=False)
-    fieldValueVN = fields.Text(
+
+    fieldValueVN = fields.Char(
         string="FieldValueVN",
         required=False)
-    remarks = fields.Text(
+
+    remarks = fields.Char(
         string="Remarks",
         required=False)
-
-
 
 
