@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_production_warehouse_tree" model="ir.ui.view">
+        <field name="name">basic.data.warehouse.tree</field>
+        <field name="model">basic.data.warehouse</field>
+        <field name="arch" type="xml">
+            <tree export_xlsx="0">
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_production_warehouse_form" model="ir.ui.view">
+        <field name="name">basic.data.warehouse.form</field>
+        <field name="model">basic.data.warehouse</field>
+        <field name="arch" type="xml">
+            <form string="_form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_production_warehouse_search" model="ir.ui.view">
+        <field name="name">basic.data.warehouse.search</field>
+        <field name="model">basic.data.warehouse</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_basic_data_warehouse" model="ir.actions.act_window">
+        <field name="name">Warehouse</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">basic.data.warehouse</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Warehouse!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_warehouse"
+              name="Warehouse"
+              parent="menu_basic_data"
+              action="action_basic_data_warehouse"
+              sequence="14"/>
+</odoo>

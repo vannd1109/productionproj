@@ -5,7 +5,7 @@
         <field name="name">basic.data.unit.tree</field>
         <field name="model">basic.data.unit</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree export_xlsx="0">
                 <field name="fieldCode"/>
                 <field name="name"/>
                 <field name="fieldValueVN"/>

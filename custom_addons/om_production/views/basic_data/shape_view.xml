@@ -5,7 +5,7 @@
         <field name="name">basic.data.shape.tree</field>
         <field name="model">basic.data.shape</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree export_xlsx="0">
                 <field name="fieldCode"/>
                 <field name="name"/>
                 <field name="fieldValueVN"/>

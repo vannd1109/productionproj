@@ -5,8 +5,8 @@
         <field name="name">basic.data.color.tree</field>
         <field name="model">basic.data.color</field>
         <field name="arch" type="xml">
-            <tree>
-                <field name="fieldCode"/>
+            <tree export_xlsx="0">
+                <field name="name"/>
                 <field name="fieldValue"/>
                 <field name="fieldValueVN"/>
                 <field name="remarks"/>
@@ -21,7 +21,7 @@
             <form string="_form">
                 <sheet>
                     <group>
-                        <field name="fieldCode"/>
+                        <field name="name"/>
                         <field name="fieldValue"/>
                     </group>
                     <group>
@@ -38,7 +38,7 @@
         <field name="model">basic.data.color</field>
         <field name="arch" type="xml">
             <search>
-                <field name="fieldCode"/>
+                <field name="name"/>
             </search>
         </field>
     </record>

@@ -6,10 +6,10 @@ class Status(models.Model):
 
     fieldCode = fields.Char(
         string='FieldCode')
-    name = fields.Text(
+    name = fields.Char(
         string="FieldValue",
         required=False)
-    fieldValueVN = fields.Text(
+    fieldValueVN = fields.Char(
         string="FieldValueVN",
         required=False)
     remarks = fields.Text(

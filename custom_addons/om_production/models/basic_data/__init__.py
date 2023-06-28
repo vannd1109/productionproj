@@ -15,4 +15,7 @@ from . import productionStep
 from . import workCenter
 from . import warehouse
 from . import location
-from . import exchangeRate
+from . import lop
+from . import workerTeam
+from . import sites
+from . import productionProcess

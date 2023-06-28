@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_production_worker_center_tree" model="ir.ui.view">
+        <field name="name">basic.data.worker.center.tree</field>
+        <field name="model">basic.data.worker.center</field>
+        <field name="arch" type="xml">
+            <tree export_xlsx="0">
+                <field name="facility"/>
+                <field name="wcCode"/>
+                <field name="wcName"/>
+                <field name="stepCodeIN"/>
+                <field name="stepCodeOUT"/>
+                <field name="stepCodeTransit"/>
+                <field name="statusWeight"/>
+                <field name="statusWeightJobIN"/>
+                <field name="statusWeightJobOUT"/>
+                <field name="preventMixing"/>
+                <field name="subProcess"/>
+                <field name="origin"/>
+                <field name="dustInput"/>
+                <field name="stdProcess"/>
+                <field name="perLimit"/>
+                <field name="efficiency"/>
+                <field name="showPic"/>
+                <field name="workerTeam"/>
+                <field name="showStdProcess"/>
+                <field name="showRpt"/>
+                <field name="repair"/>
+                <field name="repairWCCode"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_production_worker_center_form" model="ir.ui.view">
+        <field name="name">basic.data.worker.center.form</field>
+        <field name="model">basic.data.worker.center</field>
+        <field name="arch" type="xml">
+            <form string="_form">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="facility"/>
+                            <field name="wcCode"/>
+                            <field name="wcName"/>
+                            <field name="stepCodeIN"/>
+                            <field name="stepCodeOUT"/>
+                            <field name="stepCodeTransit"/>
+                            <field name="statusWeight"/>
+                            <field name="statusWeightJobIN"/>
+                            <field name="statusWeightJobOUT"/>
+                            <field name="preventMixing"/>
+                            <field name="subProcess"/>
+                        </group>
+                        <group>
+                            <field name="origin"/>
+                            <field name="dustInput"/>
+                            <field name="stdProcess"/>
+                            <field name="perLimit"/>
+                            <field name="efficiency"/>
+                            <field name="showPic"/>
+                            <field name="workerTeam"/>
+                            <field name="showStdProcess"/>
+                            <field name="showRpt"/>
+                            <field name="repair"/>
+                            <field name="repairWCCode"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_production_worker_center_search" model="ir.ui.view">
+        <field name="name">basic.data.worker.center.search</field>
+        <field name="model">basic.data.worker.center</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="wcCode"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_basic_data_worker_center" model="ir.actions.act_window">
+        <field name="name">Worker Center</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">basic.data.worker.center</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Worker Center!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_worker_center"
+              name="Worker Center"
+              parent="menu_basic_data"
+              action="action_basic_data_worker_center"
+              sequence="13"/>
+</odoo>

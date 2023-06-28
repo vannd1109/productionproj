@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_production_view_bag_summary_by_customer_graph" model="ir.ui.view">
+        <field name="name">report.view.bag..summary.by.customer.graph</field>
+        <field name="model">report.view.bag.summary.by.customer</field>
+        <field name="arch" type="xml">
+            <graph string="View Bag Summary By Customer">
+                <field name="sites" type="row"/>
+                <field name="productionProcess" type="row" />
+                <field name="customerCode" type="col" />
+                <field name="generalSequence" type="row" />
+                <field name="stepName" type="row" />
+                <field name="totalQty" type="col"/>
+                <field name="totalMetalWeight" type="col"/>
+            </graph>
+        </field>
+    </record>
+    <record id="view_production_view_bag_summary_by_customer_pivot" model="ir.ui.view">
+        <field name="name">report.view.bag..summary.by.customer.pivot</field>
+        <field name="model">report.view.bag.summary.by.customer</field>
+        <field name="arch" type="xml">
+            <pivot string="View Bag Summary By Customer">
+                <field name="sites" type="row"/>
+                <field name="productionProcess" type="row" />
+                <field name="customerCode" type="col" />
+                <field name="generalSequence" type="row" />
+                <field name="stepName" type="row" />
+                <field name="totalQty" type="col"/>
+                <field name="totalMetalWeight" type="col"/>
+            </pivot>
+        </field>
+    </record>
+    <record id="view_production_view_bag_summary_by_customer_search" model="ir.ui.view">
+        <field name="name">report.view.bag..summary.by.customer.search</field>
+        <field name="model">report.view.bag.summary.by.customer</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="customerCode"/>
+                <field name="sites"/>
+                <searchpanel limit="1">
+                    <field name="customerCode" />
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+    <record id="view_production_view_bag_summary_by_customer_tree" model="ir.ui.view">
+        <field name="name">report.view.bag..summary.by.customer.tree</field>
+        <field name="model">report.view.bag.summary.by.customer</field>
+        <field name="arch" type="xml">
+            <tree export_xlsx="0">
+                <field name="sites"/>
+                <field name="productionProcess"/>
+                <field name="generalSequence" />
+                <field name="stepName"/>
+                <field name="customerCode"/>
+                <field name="totalQty"/>
+                <field name="totalMetalWeight"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_report_view_bag_summary_by_customer" model="ir.actions.act_window">
+        <field name="name">View Bag Summary By Customer</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">report.view.bag.summary.by.customer</field>
+        <field name="view_mode">pivot,tree,graph,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No data!
+            </p>
+        </field>
+    </record>
+    <menuitem id="menu_report_view_bag_summary_by_customer"
+              name="View Bag Summary By Customer"
+              parent="menu_report"
+              action="action_report_view_bag_summary_by_customer"
+              sequence="2"/>
+</odoo>
