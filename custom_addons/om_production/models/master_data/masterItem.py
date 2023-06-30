@@ -108,22 +108,22 @@ class MaterItem(models.Model):
 
     @api.onchange('status')
     def onchange_status(self):
-        self.statusValue = self.status.fieldCode
+        self.statusValue = self.status.statusCode
         return
 
     @api.onchange('unit')
     def onchange_unit(self):
-        self.unitValue = self.unit.fieldCode
+        self.unitValue = self.unit.unitCode
         return
 
     @api.onchange('quality')
     def onchange_quality(self):
-        self.qualityCode = self.quality.fieldCode
+        self.qualityCode = self.quality.qualityCode
         return
 
     @api.onchange('shape')
     def onchange_shape(self):
-        self.shapeCode = self.shape.fieldCode
+        self.shapeCode = self.shape.shapeCode
         return
 
     @api.onchange('pathPicture')

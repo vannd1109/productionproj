@@ -3,25 +3,25 @@ from odoo import api, fields, models
 class Customer(models.Model):
     _name = 'basic.data.customer'
     _description = 'Customer'
+    _rec_name = 'customerCode'
 
-    name = fields.Char(
-        string='CustomerCode',
-        required=False)
+    customerCode = fields.Char(
+        string='CustomerCode', required=True)
+
     customerName = fields.Char(
-        string='CustomerName',
-        required=False)
+        string='CustomerName', required=True)
+
     customerRegistration = fields.Char(
-        string='CustomerRegistration',
-        required=False)
+        string='CustomerRegistration', required=True)
+
     address = fields.Char(
-        string='Address',
-        required=False)
+        string='Address', required=True)
+
     phoneNumber = fields.Char(
-        string='PhoneNumber',
-        required=False)
+        string='PhoneNumber', required=True)
+
     email = fields.Char(
-        string='Email',
-        required=False)
+        string='Email', required=True)
 
 
 

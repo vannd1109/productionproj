@@ -3,17 +3,18 @@ from odoo import api, fields, models
 class Origin(models.Model):
     _name = 'basic.data.origin'
     _description = 'Origin'
+    _rec_name = 'originName'
 
-    fieldCode = fields.Char(
-        string='FieldCode')
-    name = fields.Char(
-        string="FieldValue",
-        required=False)
-    fieldValueVN = fields.Char(
-        string="FieldValueVN",
-        required=False)
+    originCode = fields.Char(
+        string='OriginCode', required=True)
+
+    originName = fields.Char(
+        string="OriginName", required=True)
+
+    originNameVN = fields.Char(
+        string="originNameVN", required=True)
+
     remarks = fields.Char(
-        string="Remarks",
-        required=False)
+        string="Remarks", required=False)
 
 

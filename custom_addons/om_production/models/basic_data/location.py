@@ -7,15 +7,15 @@ class Location(models.Model):
 
     warehouse = fields.Many2one(
         'basic.data.warehouse',
-        string='Warehouse')
+        string='Warehouse', required=True)
 
     location = fields.Char(
-        string='Location')
+        string='Location', required=True)
 
     description = fields.Char(
-        string='Description')
+        string='Description', required=True)
 
     group = fields.Selection(
         string='Group',
         selection=[('finding', 'Finding'),
-                   ('metal', 'Metal'), ('stone', 'Stone'), ('rej', 'Rej')])
+                   ('metal', 'Metal'), ('stone', 'Stone'), ('rej', 'Rej')], required=True)

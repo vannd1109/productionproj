@@ -4,17 +4,17 @@ class Structure(models.Model):
     _name = 'basic.data.structure'
     _description = 'Structure'
 
-    fieldCode = fields.Char(
-        string='FieldCode')
-    fieldValue = fields.Char(
-        string="FieldValue",
-        required=False)
-    fieldValueVN = fields.Char(
-        string="FieldValueVN",
-        required=False)
+    structureCode = fields.Char(
+        string='StructureCode', required=True)
+
+    structureName = fields.Char(
+        string="StructureName", required=True)
+
+    structureNameVN = fields.Char(
+        string="structureNameVN", required=True)
+
     remarks = fields.Text(
-        string="Remarks",
-        required=False)
+        string="Remarks", required=False)
 
 
 

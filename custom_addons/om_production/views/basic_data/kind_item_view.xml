@@ -5,9 +5,9 @@
         <field name="model">basic.data.kind.item</field>
         <field name="arch" type="xml">
             <tree export_xlsx="0">
-                <field name="name"/>
-                <field name="fieldValue"/>
-                <field name="fieldValueVN"/>
+                <field name="kindItemCode"/>
+                <field name="kindItemName"/>
+                <field name="kindItemNameVN"/>
                 <field name="remarks"/>
             </tree>
         </field>
@@ -20,11 +20,11 @@
             <form string="_form">
                 <sheet>
                     <group>
-                        <field name="name"/>
-                        <field name="fieldValue"/>
+                        <field name="kindItemCode"/>
+                        <field name="kindItemName"/>
                     </group>
                     <group>
-                        <field name="fieldValueVN"/>
+                        <field name="kindItemNameVN"/>
                         <field name="remarks"/>
                     </group>
                 </sheet>
@@ -37,7 +37,7 @@
         <field name="model">basic.data.kind.item</field>
         <field name="arch" type="xml">
             <search>
-                <field name="name"/>
+                <field name="kindItemCode"/>
             </search>
         </field>
     </record>
@@ -50,7 +50,7 @@
             <field name="context">{}</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
-                    Create your first Kind Item!
+                   No data!
                 </p>
             </field>
     </record>

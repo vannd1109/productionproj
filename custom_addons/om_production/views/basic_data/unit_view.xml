@@ -6,9 +6,9 @@
         <field name="model">basic.data.unit</field>
         <field name="arch" type="xml">
             <tree export_xlsx="0">
-                <field name="fieldCode"/>
-                <field name="name"/>
-                <field name="fieldValueVN"/>
+                <field name="unitCode"/>
+                <field name="unitName"/>
+                <field name="unitNameVN"/>
                 <field name="remarks"/>
             </tree>
         </field>
@@ -21,11 +21,11 @@
             <form string="_form">
                 <sheet>
                     <group>
-                        <field name="fieldCode"/>
-                        <field name="name"/>
+                        <field name="unitCode"/>
+                        <field name="unitName"/>
                     </group>
                     <group>
-                        <field name="fieldValueVN"/>
+                        <field name="unitNameVN"/>
                         <field name="remarks"/>
                     </group>
                 </sheet>
@@ -38,7 +38,7 @@
         <field name="model">basic.data.unit</field>
         <field name="arch" type="xml">
             <search>
-                <field name="fieldCode"/>
+                <field name="unitCode"/>
             </search>
         </field>
     </record>
@@ -51,7 +51,7 @@
         <field name="context">{}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Create your first Unit!
+                No Data!
             </p>
         </field>
     </record>

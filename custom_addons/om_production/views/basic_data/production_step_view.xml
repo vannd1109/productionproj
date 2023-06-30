@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="view_production_step_tree" model="ir.ui.view">
-        <field name="name">basic.data.production.step.tree</field>
-        <field name="model">basic.data.production.step</field>
-        <field name="arch" type="xml">
-            <tree export_xlsx="0">
-                <field name="stepCode"/>
-                <field name="name"/>
-                <field name="generalSequence"/>
-            </tree>
-        </field>
-    </record>
+<!--    <record id="view_production_step_tree" model="ir.ui.view">-->
+<!--        <field name="name">basic.data.production.step.tree</field>-->
+<!--        <field name="model">basic.data.production.step</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <tree export_xlsx="0">-->
+<!--                <field name="stepCode"/>-->
+<!--                <field name="stepDescription"/>-->
+<!--                <field name="generalSequence"/>-->
+<!--            </tree>-->
+<!--        </field>-->
+<!--    </record>-->
 
-    <record id="view_production_step_form" model="ir.ui.view">
-        <field name="name">basic.data.production.step.form</field>
-        <field name="model">basic.data.production.step</field>
-        <field name="arch" type="xml">
-            <form string="_form">
-                <sheet>
-                    <group>
-                        <field name="stepCode"/>
-                        <field name="name"/>
-                    </group>
-                    <group>
-                        <field name="generalSequence"/>
-                    </group>
-                </sheet>
-            </form>
-        </field>
-    </record>
+<!--    <record id="view_production_step_form" model="ir.ui.view">-->
+<!--        <field name="name">basic.data.production.step.form</field>-->
+<!--        <field name="model">basic.data.production.step</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form string="_form">-->
+<!--                <sheet>-->
+<!--                    <group>-->
+<!--                        <field name="stepCode"/>-->
+<!--                        <field name="stepDescription"/>-->
+<!--                    </group>-->
+<!--                    <group>-->
+<!--                        <field name="generalSequence"/>-->
+<!--                    </group>-->
+<!--                </sheet>-->
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
 
-    <record id="view_production_color_search" model="ir.ui.view">
-        <field name="name">basic.data.production.step.search</field>
-        <field name="model">basic.data.production.step</field>
-        <field name="arch" type="xml">
-            <search>
-                <field name="stepCode"/>
-            </search>
-        </field>
-    </record>
+<!--    <record id="view_production_color_search" model="ir.ui.view">-->
+<!--        <field name="name">basic.data.production.step.search</field>-->
+<!--        <field name="model">basic.data.production.step</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <search>-->
+<!--                <field name="stepCode"/>-->
+<!--            </search>-->
+<!--        </field>-->
+<!--    </record>-->
 
     <record id="action_basic_data_production_step" model="ir.actions.act_window">
         <field name="name">Production Step</field>

@@ -8,7 +8,7 @@
             <tree export_xlsx="0">
                 <field name="typeCode" />
                 <field name="typeName" />
-                <field name="name" />
+                <field name="eTypeName" />
                 <field name="kindItem" />
                 <field name="remarks" />
                 <field name="oldTypeCode" />
@@ -26,7 +26,7 @@
                         <group>
                             <field name="typeCode" />
                             <field name="typeName" />
-                            <field name="name" />
+                            <field name="eTypeName" />
                         </group>
                         <group>
                             <field name="kindItem" />
@@ -57,7 +57,7 @@
         <field name="context">{}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Create your first Item Type!
+                No Data!
             </p>
         </field>
     </record>

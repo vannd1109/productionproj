@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="view_production_structure_tree" model="ir.ui.view">
-        <field name="name">basic.data.structure.tree</field>
-        <field name="model">basic.data.structure</field>
-        <field name="arch" type="xml">
-            <tree export_xlsx="0">
-                <field name="fieldCode"/>
-                <field name="fieldValue"/>
-                <field name="fieldValueVN"/>
-                <field name="remarks"/>
-            </tree>
-        </field>
-    </record>
+<!--    <record id="view_production_structure_tree" model="ir.ui.view">-->
+<!--        <field name="name">basic.data.structure.tree</field>-->
+<!--        <field name="model">basic.data.structure</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <tree export_xlsx="0">-->
+<!--                <field name="structureCode"/>-->
+<!--                <field name="structureName"/>-->
+<!--                <field name="structureNameVN"/>-->
+<!--                <field name="remarks"/>-->
+<!--            </tree>-->
+<!--        </field>-->
+<!--    </record>-->
 
-    <record id="view_production_structure_form" model="ir.ui.view">
-        <field name="name">basic.data.structure.form</field>
-        <field name="model">basic.data.structure</field>
-        <field name="arch" type="xml">
-            <form string="_form">
-                <sheet>
-                    <group>
-                        <field name="fieldCode"/>
-                        <field name="fieldValue"/>
-                    </group>
-                    <group>
-                        <field name="fieldValueVN"/>
-                        <field name="remarks"/>
-                    </group>
-                </sheet>
-            </form>
-        </field>
-    </record>
+<!--    <record id="view_production_structure_form" model="ir.ui.view">-->
+<!--        <field name="name">basic.data.structure.form</field>-->
+<!--        <field name="model">basic.data.structure</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form string="_form">-->
+<!--                <sheet>-->
+<!--                    <group>-->
+<!--                        <field name="structureCode"/>-->
+<!--                        <field name="structureName"/>-->
+<!--                    </group>-->
+<!--                    <group>-->
+<!--                        <field name="structureNameVN"/>-->
+<!--                        <field name="remarks"/>-->
+<!--                    </group>-->
+<!--                </sheet>-->
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
 
-    <record id="view_production_structure_search" model="ir.ui.view">
-        <field name="name">basic.data.structure.search</field>
-        <field name="model">basic.data.structure</field>
-        <field name="arch" type="xml">
-            <search>
-                <field name="fieldCode"/>
-            </search>
-        </field>
-    </record>
+<!--    <record id="view_production_structure_search" model="ir.ui.view">-->
+<!--        <field name="name">basic.data.structure.search</field>-->
+<!--        <field name="model">basic.data.structure</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <search>-->
+<!--                <field name="structureCode"/>-->
+<!--            </search>-->
+<!--        </field>-->
+<!--    </record>-->
 
     <record id="action_basic_data_structure" model="ir.actions.act_window">
         <field name="name">Structure</field>
@@ -51,7 +51,7 @@
         <field name="context">{}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Create your first Structure!
+                No Data!
             </p>
         </field>
     </record>

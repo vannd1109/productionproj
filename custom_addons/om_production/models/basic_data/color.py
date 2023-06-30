@@ -3,20 +3,18 @@ from odoo import api, fields, models
 class Color(models.Model):
     _name = 'basic.data.color'
     _description = 'Color'
+    _rec_name = "colorCode"
 
-    name = fields.Char(
-        string='FieldCode')
+    colorCode = fields.Char(
+        string='ColorCode', required=True)
 
-    fieldValue = fields.Char(
-        string="FieldValue",
-        required=False)
+    colorName = fields.Char(
+        string="ColorName", required=True)
 
-    fieldValueVN = fields.Char(
-        string="FieldValueVN",
-        required=False)
+    colorNameVN = fields.Char(
+        string="ColorNameVN", required=True)
 
     remarks = fields.Char(
-        string="Remarks",
-        required=False)
+        string="Remarks", required=False)
 
 

@@ -3,17 +3,19 @@ from odoo import api, fields, models
 class WorkerTeam(models.Model):
     _name = 'basic.data.worker.team'
     _description = 'Worker Team'
+    _rec_name = 'workerTeamName'
 
-    facility = fields.Char(
-        string='Facility')
+    facility = fields.Many2many(
+        'basic.data.sites',
+        string='Facility', required=True)
 
-    name = fields.Char(
-        string='TeamName')
+    workerTeamName = fields.Char(
+        string='WorkerTeamName', required=True)
 
     workType = fields.Char(
-        string='WorkType')
+        string='WorkType', required=True)
 
     shootingItem = fields.Char(
-        string='ShootingItem')
+        string='ShootingItem', required=True)
 
 

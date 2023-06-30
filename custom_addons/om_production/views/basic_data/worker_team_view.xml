@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <tree export_xlsx="0">
                 <field name="facility"/>
-                <field name="name"/>
+                <field name="workerTeamName"/>
                 <field name="workType"/>
                 <field name="shootingItem"/>
             </tree>
@@ -22,7 +22,7 @@
                 <sheet>
                     <group>
                         <field name="facility"/>
-                        <field name="name"/>
+                        <field name="workerTeamName"/>
                     </group>
                     <group>
                         <field name="workType"/>
@@ -38,7 +38,7 @@
         <field name="model">basic.data.worker.team</field>
         <field name="arch" type="xml">
             <search>
-                <field name="name"/>
+                <field name="workerTeamName"/>
             </search>
         </field>
     </record>
@@ -51,7 +51,7 @@
         <field name="context">{}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Create your first Worker Team!
+                No Data!
             </p>
         </field>
     </record>

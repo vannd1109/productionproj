@@ -4,9 +4,10 @@ from odoo import api, fields, models
 class Warehouse(models.Model):
     _name = 'basic.data.warehouse'
     _description = 'Warehouse'
+    _rec_name = 'wareHouseCode'
 
-    name = fields.Char(
-        string='Warehouse')
+    wareHouseCode = fields.Char(
+        string='WareHouseCode', required=True)
 
-    description = fields.Char(
-        string='Description')
+    wareHouseDescription = fields.Char(
+        string='WareHouseDescription', required=True)

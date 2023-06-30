@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <tree export_xlsx="0">
                 <field name="facility"/>
-                <field name="name"/>
+                <field name="lop"/>
                 <field name="yearGold"/>
                 <field name="itemNoCasting"/>
                 <field name="inputWeight"/>
@@ -32,7 +32,7 @@
                     <group>
                         <group>
                             <field name="facility"/>
-                            <field name="name"/>
+                            <field name="lop"/>
                             <field name="yearGold"/>
                             <field name="itemNoCasting"/>
                             <field name="inputWeight"/>
@@ -58,7 +58,7 @@
         <field name="model">basic.data.lop</field>
         <field name="arch" type="xml">
             <search>
-                <field name="name"/>
+                <field name="lop"/>
             </search>
         </field>
     </record>
@@ -71,7 +71,7 @@
         <field name="context">{}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Create your first LOP!
+                No Data!
             </p>
         </field>
     </record>

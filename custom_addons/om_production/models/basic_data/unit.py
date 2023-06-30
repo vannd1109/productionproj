@@ -3,18 +3,19 @@ from odoo import api, fields, models
 class Unit(models.Model):
     _name = 'basic.data.unit'
     _description = 'Unit'
+    _rec_name = 'unitName'
 
-    fieldCode = fields.Char(
-        string='FieldCode')
-    name = fields.Char(
-        string="FieldValue",
-        required=False)
-    fieldValueVN = fields.Char(
-        string="FieldValueVN",
-        required=False)
+    unitCode = fields.Char(
+        string='UnitCode', required=True)
+
+    unitName = fields.Char(
+        string="UnitName", required=True)
+
+    unitNameVN = fields.Char(
+        string="UnitNameVN", required=True)
+
     remarks = fields.Text(
-        string="Remarks",
-        required=False)
+        string="Remarks", required=False)
 
 
 

@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="view_production_status_tree" model="ir.ui.view">
-        <field name="name">basic.data.status.tree</field>
-        <field name="model">basic.data.status</field>
-        <field name="arch" type="xml">
-            <tree export_xlsx="0">
-                <field name="fieldCode"/>
-                <field name="name"/>
-                <field name="fieldValueVN"/>
-                <field name="remarks"/>
-            </tree>
-        </field>
-    </record>
+<!--    <record id="view_production_status_tree" model="ir.ui.view">-->
+<!--        <field name="name">basic.data.status.tree</field>-->
+<!--        <field name="model">basic.data.status</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <tree export_xlsx="0">-->
+<!--                <field name="statusCode"/>-->
+<!--                <field name="statusName"/>-->
+<!--                <field name="statusNameVN"/>-->
+<!--                <field name="remarks"/>-->
+<!--            </tree>-->
+<!--        </field>-->
+<!--    </record>-->
 
-    <record id="view_production_status_form" model="ir.ui.view">
-        <field name="name">basic.data.status.form</field>
-        <field name="model">basic.data.status</field>
-        <field name="arch" type="xml">
-            <form string="_form">
-                <sheet>
-                    <group>
-                        <field name="fieldCode"/>
-                        <field name="name"/>
-                    </group>
-                    <group>
-                        <field name="fieldValueVN"/>
-                        <field name="remarks"/>
-                    </group>
-                </sheet>
-            </form>
-        </field>
-    </record>
+<!--    <record id="view_production_status_form" model="ir.ui.view">-->
+<!--        <field name="name">basic.data.status.form</field>-->
+<!--        <field name="model">basic.data.status</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form string="_form">-->
+<!--                <sheet>-->
+<!--                    <group>-->
+<!--                        <field name="statusCode"/>-->
+<!--                        <field name="statusName"/>-->
+<!--                    </group>-->
+<!--                    <group>-->
+<!--                        <field name="statusNameVN"/>-->
+<!--                        <field name="remarks"/>-->
+<!--                    </group>-->
+<!--                </sheet>-->
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
 
-    <record id="view_production_status_search" model="ir.ui.view">
-        <field name="name">basic.data.status.search</field>
-        <field name="model">basic.data.status</field>
-        <field name="arch" type="xml">
-            <search>
-                <field name="fieldCode"/>
-            </search>
-        </field>
-    </record>
+<!--    <record id="view_production_status_search" model="ir.ui.view">-->
+<!--        <field name="name">basic.data.status.search</field>-->
+<!--        <field name="model">basic.data.status</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <search>-->
+<!--                <field name="statusCode"/>-->
+<!--            </search>-->
+<!--        </field>-->
+<!--    </record>-->
 
     <record id="action_basic_data_status" model="ir.actions.act_window">
         <field name="name">Status</field>
@@ -51,7 +51,7 @@
         <field name="context">{}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Create your first Status!
+                No Data!
             </p>
         </field>
     </record>
